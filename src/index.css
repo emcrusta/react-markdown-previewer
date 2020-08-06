@@ -1,13 +1,159 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+.App {
+  text-align: center;
 }
 
+.markdown-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  font-family: 'Mukta', sans-serif;
+  color: #264653;
+}
+
+.header {
+  display: inline-block;
+  position: relative;
+  background-color: #264653;
+  padding: 20px;
+}
+
+.header p {
+  font-size: 2em;
+  float: left;
+  font-weight: bold;
+  color: #fcfcfc;
+  text-shadow: black 1px 1px 2px;
+  margin: 0 auto;
+}
+
+.header .faWindowMaximize .faWindowMinimize {
+  float: right;
+  color: #fcfcfc;
+  font-size: 2em;
+  text-shadow: black 1px 1px 2px;
+  margin: 0 auto;
+}
+
+.windowMax:hover, .windowMin:hover {   
+  color: #289D8F;
+  cursor: pointer;
+}
+
+.editor-wrapper {
+  width: 680px;
+  margin: 0 auto;
+}
+
+.editor-wrapper .header {
+  width: 100%;
+}
+
+#editor {
+  display: inline-block;
+  background-color: #F3F3F3;
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+}
+
+.preview-wrapper {
+  width: 850px;
+  margin: 0 auto;
+}
+.preview-wrapper .header {
+  width: 100%;
+}
+
+#preview {
+  display: inline-block;
+  overflow-wrap: break-word;
+  background-color: #F3F3F3;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.max {
+  width: 90%;
+  margin: auto;
+}
+
+.max #editor {
+  min-height: 500px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Markdown styling */
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  display: inline-block;
+  padding: 10px;
+  background-color: #289d8f;
+  color: #fcfcfc;
+}
+
+blockquote {
+  background: #289d8f;
+  border-left: 5px solid #264653;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+blockquote:before {
+  color: #264653;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.2em;
+}
+
+blockquote p {
+  display: inline-block;
+  color: #fcfcfc;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+table {
+  background-color: #289D8F;
+  color: #fcfcfc;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px;
+  border: solid #264653 3px;
+}
+
+img {
+  width: 45%;
+}
+
+@media screen and (max-width: 900px) {
+   .editor-wrapper {
+    width: 480px;
+  }
+  .preview-wrapper {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+    .editor-wrapper {
+    width: 80vw;
+  }
+  .preview-wrapper {
+    width: 95vw;
+  }  
 }
