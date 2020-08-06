@@ -28,7 +28,7 @@
   margin: 0 auto;
 }
 
-.header .faWindowMaximize .faWindowMinimize {
+.windowMax, .windowMin {
   float: right;
   color: #fcfcfc;
   font-size: 2em;

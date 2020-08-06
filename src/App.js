@@ -57,6 +57,7 @@ class App extends Component{
                    </div>
                 <div className={classes[1]}>
                     <Header text="Preview"
+                        className={classes[3]}
                         onClick={this.handlePreviewMax}
                         icon={classes[2]}
                      />
